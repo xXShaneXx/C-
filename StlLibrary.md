@@ -1,13 +1,17 @@
-C++ Standard Template Library (STL) Complete Guide
-Table of Contents
-Basic Containers
-Associative Containers
-Container Adapters
-Algorithms
-Iterators
-Best Practices
-Basic Containers
-std::vector
+# C++ Standard Template Library (STL) Complete Guide
+
+## Table of Contents
+1. [Basic Containers](#basic-containers)
+2. [Associative Containers](#associative-containers)
+3. [Container Adapters](#container-adapters)
+4. [Algorithms](#algorithms)
+5. [Iterators](#iterators)
+6. [Best Practices](#best-practices)
+
+## Basic Containers
+
+### std::vector
+```cpp
 #include <vector>
 
 std::vector numbers{1, 2, 3, 4, 5};
@@ -15,7 +19,7 @@ numbers.push_back(6);    // Add element
 numbers.pop_back();      // Remove last element
 numbers[0];              // Access element
 
-Use when: You need dynamic array with fast random accesss
+Use when: You need dynamic array with fast random access
 std::array
 #include <array>
 
@@ -23,7 +27,7 @@ std::array<int, 5> numbers{1, 2, 3, 4, 5};
 numbers[0] = 10;         // Modify element
 auto size = numbers.size();
 
-Use when: You need fixed-size array with bounds checkings
+Use when: You need fixed-size array with bounds checking
 std::list
 #include <list>
 
@@ -31,7 +35,7 @@ std::list numbers{1, 2, 3, 4, 5};
 numbers.push_front(0);   // Add to front
 numbers.pop_front();     // Remove from front
 
-Use when: You need frequent insertions/deletions at both endss
+Use when: You need frequent insertions/deletions at both ends
 Associative Containers
 std::set and std::multiset
 #include <set>
@@ -40,7 +44,7 @@ std::set<int> numbers{1, 2, 3, 4, 5};
 numbers.emplace(6);      // Insert element
 numbers.find(3);         // Find element
 
-Use when: You need ordered unique elements (set) or ordered elements with duplicates (multiset)s
+Use when: You need ordered unique elements (set) or ordered elements with duplicates (multiset)
 std::map and std::multimap
 #include <map>
 
@@ -48,7 +52,7 @@ std::map<std::string, int> prices{};
 prices.emplace("bread", 20);
 std::cout << prices["bread"];  // Access value
 
-Warning: Using operator[] creates element if key doesn't exists
+Warning: Using operator[] creates element if key doesn't exist
 Algorithms
 Finding and Counting
 // Finding elements
@@ -90,7 +94,6 @@ People give_a_raise(const People& people) {
     return after_raise;
 }
 
-s
 Numeric Operations
 #include <numeric>
 
@@ -124,7 +127,7 @@ Input Iterator: Read forward
 Output Iterator: Write forward
 Forward Iterator: Read/write forward
 Bidirectional Iterator: Read/write forward/backward
-Random Access Iterator: Read/write with random access s
+Random Access Iterator: Read/write with random access
 Common Iterator Operations
 // Basic iteration
 for (auto it = container.begin(); it != container.end(); ++it) {
@@ -193,5 +196,7 @@ Additional Resources
 C++ Reference
 STL Algorithms Complexity
 C++ Core Guidelines
-This comprehensive guide combines both the original contentsss and additional important STL features commonly used in professional C++ development. Use this as a reference while working with the C++ Standard Template Library. Remember to compile with modern C++ standards (C++11 or later) to access all features:
+Remember to compile with modern C++ standards (C++11 or later) to access all features:
 g++ -std=c++17 your_file.cpp -o your_program
+
+
